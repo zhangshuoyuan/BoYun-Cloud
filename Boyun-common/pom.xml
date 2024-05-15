@@ -1,0 +1,32 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>cn.zsy</groupId>
+        <artifactId>Boyun-Cloud</artifactId>
+        <version>1.0.1</version>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>Boyun-common</artifactId>
+
+    <!-- 模块 -->
+    <modules>
+        <module>Boyun-common-core</module>
+        <module>Boyun-common-log</module>
+        <module>Boyun-common-redis</module>
+        <module>Boyun-common-swagger</module>
+        <module>Boyun-common-security</module>
+    </modules>
+
+    <packaging>pom</packaging>
+    <name>Boyun-common</name>
+
+    <description>
+        Boyun-common通用模块
+    </description>
+
+
+
+
+</project>

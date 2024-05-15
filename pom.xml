@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>cn.zsy</groupId>
+    <artifactId>Boyun-Cloud</artifactId>
+    <version>1.0.1</version>
+
+    <description>BoYun微服务脚手架</description>
+
+    <!-- 模块 -->
+    <modules>
+        <module>Boyun-common</module>
+        <module>Boyun-api</module>
+    </modules>
+    <packaging>pom</packaging>
+
+    <!-- 环境变量配置 -->
+    <properties>
+        <boyun.version>1.0.1</boyun.version>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <hutool.version>5.8.26</hutool.version>
+        <spring.boot.version>3.1.9</spring.boot.version>
+        <spring.could.alibaba.nacos>2022.0.0.0</spring.could.alibaba.nacos>
+        <spring.could.loadbalancer>4.0.5</spring.could.loadbalancer>
+        <spring.cloud.geteway>4.0.9</spring.cloud.geteway>
+        <springdoc.openapi.version>1.7.0</springdoc.openapi.version>
+        <swagger.core.version>1.6.2</swagger.core.version>
+        <transmittable-thread-local.version>2.14.4</transmittable-thread-local.version>
+    </properties>
+
+    <!-- 依赖申明 -->
+    <dependencyManagement>
+
+        <dependencies>
+
+            <!-- 大而全的工具包 -->
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool.version}</version>
+            </dependency>
+
+            <!-- SpringBoot 依赖配置 -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring.boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- nacos/nacosConfig -->
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+                <version>${spring.could.alibaba.nacos}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+                <version>${spring.could.alibaba.nacos}</version>
+            </dependency>
+
+            <!-- SpringCloud负载均衡 -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-loadbalancer</artifactId>
+                <version>${spring.could.loadbalancer}</version>
+            </dependency>
+
+            <!-- SpringCloud 网关 -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-gateway</artifactId>
+                <version>${spring.cloud.geteway}</version>
+            </dependency>
+
+            <!-- Swagger 依赖配置 -->
+            <dependency>
+                <groupId>io.swagger</groupId>
+                <artifactId>swagger-models</artifactId>
+                <version>${swagger.core.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.swagger</groupId>
+                <artifactId>swagger-annotations</artifactId>
+                <version>${swagger.core.version}</version>
+            </dependency>
+
+            <!-- 线程传递值 -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>transmittable-thread-local</artifactId>
+                <version>${transmittable-thread-local.version}</version>
+            </dependency>
+
+            <!-- 核心模块 -->
+            <dependency>
+                <groupId>cn.zsy</groupId>
+                <artifactId>Boyun-common-core</artifactId>
+                <version>${boyun.version}</version>
+            </dependency>
+
+            <!-- 日志服务 -->
+            <dependency>
+                <groupId>cn.zsy</groupId>
+                <artifactId>Boyun-common-log</artifactId>
+                <version>${boyun.version}</version>
+            </dependency>
+
+            <!-- 缓存模块 -->
+            <dependency>
+                <groupId>cn.zsy</groupId>
+                <artifactId>Boyun-common-redis</artifactId>
+                <version>${boyun.version}</version>
+            </dependency>
+
+
+            <!-- 安全模块 -->
+            <dependency>
+                <groupId>cn.zsy</groupId>
+                <artifactId>Boyun-common-security</artifactId>
+                <version>${boyun.version}</version>
+            </dependency>
+
+            <!-- 接口模块 -->
+            <dependency>
+                <groupId>cn.zsy</groupId>
+                <artifactId>Boyun-common-swagger</artifactId>
+                <version>${boyun.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>
